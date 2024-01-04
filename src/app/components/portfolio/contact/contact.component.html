@@ -1,0 +1,26 @@
+<section class="container ff-inter">
+  <header class="header">
+    <h1 data-text="Contato" class="title" style="opacity: 1; transform: none;">
+      Contato
+    </h1>
+  </header>
+  <div class="mural">
+    <p>Entre em contato ou envie-me um e-mail diretamente para <b> gersonreismelo&#64;gmail.com</b></p>
+     <!-- Formulário de contato -->
+    <form (ngSubmit)="onSubmit()">
+      <div class="fields">
+        <div class="field half">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Nome" aria-required="true" [(ngModel)]="contato.nome" required>
+        </div>
+        <div class="field half">
+          <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" aria-required="true" [(ngModel)]="contato.email" required>
+        </div>
+        <div class="field">
+          <textarea name="message" id="message" rows="5" class="form-control" placeholder="Mensagem" aria-required="true"  [(ngModel)]="contato.mensagem" required></textarea>
+        </div>
+      </div>
+
+      <button class="btn-default botao-enviar" type="submit" aria-label="Enviar mensagem">Enviar mensagem</button>
+    </form>
+  </div>
+</section>

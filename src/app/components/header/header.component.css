@@ -1,0 +1,122 @@
+/* Criando a animação com keyframes */
+@keyframes rainbow {
+  0% { fill: red; } /* Vermelho */
+  20% { fill: orange; } /* Laranja */
+  40% { fill: yellow; } /* Amarelo */
+  60% { fill: green; } /* Verde */
+  80% { fill: blue; } /* Azul */
+  100% { fill: purple; } /* Roxo */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); } /* Inicia a rotação a partir de 0 graus */
+  to { transform: rotate(360deg); } /* Completa uma rotação de 360 graus */
+}
+
+.cabecalho {
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-comum{
+  padding-right: 8em;
+}
+
+.white-icon {
+  fill: var(--text-color);
+}
+
+
+.logoSvg {
+  width: 5em;
+  height: 5em;
+}
+
+.logo a mat-icon:hover {
+  stroke: var(--text-color);
+  stroke-width: 2px;
+  stroke-opacity: 0.8;
+  transition: fill 0.8s; /* Adiciona uma transição suave */
+  animation: rainbow 5s linear infinite, rotate 5s linear infinite; /* Ativa a animação do arco-íris e da rotação */
+}
+
+.hamburguer {
+  display: none; /* Esconde o botão do hambúrguer em telas maiores */
+}
+
+nav {
+  display: block; /* Mostra o menu regular em telas maiores */
+}
+
+
+.cabecalho .logo {
+  width: 42%;
+  padding: 2rem 0rem 1rem 3rem;
+  align-items: center;
+}
+
+/* Estilos aplicados para telas menores (max-width: 768px) */
+@media (max-width: 768px) {
+  .cabecalho .logo {
+    width: 90%;
+  }
+
+  .hamburguer {
+    display: block;
+    width: 60px;
+    height: 20px;
+    background-color: transparent;
+    border: none; /* Remova a borda para o ícone */
+    cursor: pointer;
+    position: relative; /* Posicione os elementos filhos */
+    padding-right: 2em;
+  }
+
+  /* Estilizando as linhas do ícone do menu hambúrguer */
+  .linha {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+  }
+
+  .hamburguer-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-hamburguer);
+    z-index: 10;  /* Empilha o elemento acima de outros elementos */
+    padding-top: 4em;
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o tamanho do elemento */
+   }
+
+   html {
+    overflow: hidden; /* Esconde a barra de rolagem do HTML */
+  }
+
+   .hamburguer-menu a {
+    display: block;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+   }
+
+   .hamburguer-menu .fechar {
+    position: absolute;
+    right: 1em;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+   }
+
+   /* Esconde o menu regular */
+  nav {
+    display: none; /* Esconde o menu regular */
+  }
+}

@@ -1,0 +1,32 @@
+.title {
+  color: var(--text-color);
+  letter-spacing: 9.9px; /* Espaçamento entre as letras */
+  text-transform: uppercase; /* Transforma o texto em caixa alta */
+  font-size: 2.275em;
+  margin: 2rem 0rem 1.5rem;
+  position: relative;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.icon-spacing {
+  vertical-align: middle; /* Alinhamento vertical */
+}
+
+.text-link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+footer a {
+  font-weight: 400;
+}
+
+footer a:hover {
+  text-decoration: underline var(--sobrinhado-color); /* Adiciona um sublinhado e muda a cor quando o mouse está sobre o link */
+}
+
+
+
+
+

@@ -1,0 +1,77 @@
+<section class="container ff-inter">
+  <header class="header">
+    <h1 data-text="A Estrada até Aqui" class="title" style="opacity: 1; transform: none;">
+      A Estrada até Aqui
+    </h1>
+  </header>
+  <div class="mural">
+    <div class="apresentacao">
+      <div class="texto-inicial">
+        <p>Olá, sou um desenvolvedor de software, meu nome é Gerson e sou apaixonado por desafios e por explorar novas fronteiras na área da tecnologia. Nascido sob o signo de Gêmeos, tenho 27 anos e trago comigo uma história de transição notável. Inicialmente, meu caminho profissional estava ligado à refrigeração e climatização, mas em 2018, algo extraordinário aconteceu: descobri minha afinidade e fascínio pela tecnologia. </p>
+
+        <p>
+          Minha jornada começou com alguns cursos iniciais em Java, SQL e Android Development, onde percebi uma natural habilidade para lidar com esses desafios. Essa descoberta foi a âncora que impulsionou minha decisão de mergulhar de cabeça nesse universo. Determinado a aprimorar meus conhecimentos, dediquei-me intensamente aos estudos para o Enem durante a pandemia.
+        </p>
+
+        <p>
+          Foi no início de 2022 que uma nova porta se abriu: fui agraciado com uma oportunidade pelo ProUni para ingressar na renomada FIAP, onde embarquei no curso de Análise e Desenvolvimento de Sistemas. Desde então, minha jornada tem sido repleta de imersões profundas em códigos, leituras incessantes e um comprometimento incansável para me tornar um profissional excepcional nesse campo em constante evolução.
+        </p>
+
+        <p>
+          Ao longo desse percurso, adquiri uma sólida base de habilidades em uma variedade de tecnologias. Possuo conhecimento e experiência em linguagens como Java, Python, C#, e tenho uma vasta experiência em HTML5, JavaScript, CSS3, e TypeScript. Além disso, estou habituado a trabalhar com frameworks como Spring Boot, ReactJS, Hibernate, React Native, Next.js, .NET Core MVC, Node-RED, Thymeleaf, Maven e Material Design.
+        </p>
+
+        <p>
+          Minha jornada não se limita apenas às linguagens e frameworks. Estou familiarizado com contêineres e ferramentas como Docker, CLI e Docker Compose, garantindo a eficiência e portabilidade de aplicações. Uso a UML para modelagem e design e aplico práticas de BusSecDevOps, CI/CD e QA para assegurar a qualidade e segurança dos projetos.
+        </p>
+
+      </div>
+
+      <img src="../../../../assets/img/Gerson.png" alt="Minha foto">
+    </div>
+    <div>
+      <p>
+        Quando se trata de bancos de dados, tenho expertise em Oracle, MySQL, Microsoft SQL Server e Firebase, utilizando SQL Dinâmico, PL/SQL e Transact-SQL para manipulação e gerenciamento eficaz dos dados.
+      </p>
+      <p>
+        Além disso, trago familiaridade com plataformas e serviços em nuvem, especialmente no Microsoft Azure. Trabalho ativamente com criação de VM e implementação de IoT (Internet das Coisas) usando Arduino. Minha compreensão abrange PaaS, IaaS e SaaS na Cloud Microsoft Azure, juntamente com os diferentes modelos de Cloud Computing: Pública, Privada e Híbrida.
+      </p>
+      <p>
+        Entre outras habilidades, possuo experiência em Windows Services, Pacote Office, desenvolvimento de ChatBots e interações com ChatGPT. Também trabalho com ferramentas de BI para análise de dados e possuo proficiência em ambientes Windows, Linux e desenvolvimento de WebApps.
+      </p>
+      <p>
+        No que diz respeito a metodologias de trabalho, utilizo práticas como Kanban, Cultura Ágil e Scrum para gerenciar projetos de forma eficiente, garantindo entregas de qualidade dentro dos prazos estipulados.
+      </p>
+      <p>
+        Estou comprometido em continuar aprimorando minhas habilidades técnicas e explorar novas tecnologias. Minha busca incessante por soluções inovadoras e dedicação à excelência técnica me capacitam a contribuir significativamente para projetos dinâmicos e desafiadores. Estou ansioso para os próximos capítulos desta jornada fascinante na área de desenvolvimento de sistemas.
+      </p>
+    </div>
+
+    <div class="tecnologias">
+      <h2 data-text="Tecnologias que Domino:" class="title smaller" style="opacity: 1; transform: none;">
+        Tecnologias que Domino:
+      </h2>
+      <div class="opcoes">
+        <!-- Links para seleção de categorias -->
+        <a class="opcao botao" [class.active]="opcaoSelecionada === Opcao.BACKEND" (click)="selecionarOpcao(Opcao.BACKEND)">Back-end</a>
+        <a class="opcao botao" [class.active]="opcaoSelecionada === Opcao.FRONTEND" (click)="selecionarOpcao(Opcao.FRONTEND)">Front-end</a>
+        <a class="opcao botao" [class.active]="opcaoSelecionada === Opcao.BANCODEDADOS" (click)="selecionarOpcao(Opcao.BANCODEDADOS)">Banco de Dados</a>
+        <a class="opcao botao" [class.active]="opcaoSelecionada === Opcao.DEVOPS" (click)="selecionarOpcao(Opcao.DEVOPS)">DevOps</a>
+        <a class="opcao botao" [class.active]="opcaoSelecionada === Opcao.CIENCIADEDADOS" (click)="selecionarOpcao(Opcao.CIENCIADEDADOS)">Ciência de Dados</a>
+        <a class="opcao botao" [class.active]="opcaoSelecionada === Opcao.GESTAODEPROJETO" (click)="selecionarOpcao(Opcao.GESTAODEPROJETO)">Gestão de Projetos</a>
+      </div>
+
+
+      <div class="tecnologias-display">
+        <!-- Loop para exibir as tecnologias -->
+        <div class="tecnologias-enquadro" *ngFor="let tecnologia of tecnologias2; let i = index">
+           <!-- Ícone da tecnologia -->
+          <img class="icon" [src]="tecnologia.iconUrl" [alt]="'Ícone ' + tecnologia">
+          <span>{{ tecnologia.name }}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

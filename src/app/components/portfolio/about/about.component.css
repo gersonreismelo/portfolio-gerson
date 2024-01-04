@@ -1,0 +1,146 @@
+.apresentacao{
+  display: flex;
+  width: 100%; /* Defina a largura desejada */
+  height: 32.7em; /* Defina a altura desejada */
+  overflow: hidden;
+}
+
+.apresentacao div{
+  width: 76%;
+  padding-right: 1.5em;
+}
+
+.texto-inicial p{
+  text-align: justify;
+}
+
+.apresentacao img{
+  width: 25%;
+  height: 93%;
+  padding-top: 0.5em;
+}
+
+.title {
+  color: var(--text-color);
+  letter-spacing: 9.9px;
+  text-transform: uppercase;
+  font-size: 2.275em;
+  margin: 2rem 0rem 1.5rem;
+  position: relative;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.smaller {
+  color: var(--text-color);
+  letter-spacing: 6px;
+  font-size: 2.2em;
+  font-weight: 400;
+}
+
+.tecnologias {
+  display: flex; /* Define o layout como flexbox */
+  flex-direction: column; /* Alinha os itens em coluna */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 100%; /* Ocupa toda a altura disponível (opcional) */
+}
+
+.opcao {
+  color: var(--text-color);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tecnologias-display {
+  display: flex;
+  padding: 3em 1em 1em 3em;
+  gap: 4em;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.tecnologias-enquadro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2em;
+  align-items: center;
+}
+
+.tecnologias-display span {
+  font-size: 18px;
+}
+
+.active {
+  /* Definições de cor para quando a classe .active estiver ativa */
+  background-color: var(--color-hamburguer);
+  color: var(--text-color);
+
+  /* Gradiente como parte do background */
+  background-image: linear-gradient(90.21deg, var(--color-start) -5.91%, var(--color-end) 111.58%);
+  /* Outras propriedades de background conforme necessário */
+  background-size: cover; /* Ajuste conforme desejado */
+  background-position: center; /* Ajuste conforme desejado */
+  /* ... outras propriedades de fundo, se aplicáveis */
+
+  border-radius: 5px 5px 0px 0px;
+}
+
+@media (max-width: 768px) {
+  .apresentacao {
+    display: flex;
+    flex-direction: column-reverse;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .apresentacao div {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .apresentacao img{
+    width: 100%;
+    padding: 1em 0em 1em 0em;
+  }
+
+  .tecnologias{
+    padding-left: 2em;
+  }
+
+  .opcoes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .opcao{
+    text-align: initial;
+    width: 100%;
+    padding: 7px;
+    gap: 2em;
+  }
+
+  .tecnologias-display {
+    display: flex;
+    padding: 3em 1em 1em 2.2em;
+    gap: 4em;
+    flex-wrap: wrap;
+  }
+
+  .tecnologias-display span {
+    font-size: 12px;
+  }
+
+}
+
+

@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg-color: #020a13; /* Cor de fundo principal */
+  --text-color: white; /* Cor do texto principal */
+  --blue-shadow: rgb(3, 119, 119); /* Sombra azul turquesa */
+  --pink-shadow: #ad0559; /* Sombra rosa */
+  --accent-color: #84EEC1; /* Cor de destaque/acento */
+  --contorn-color: #0cc7c7; /* Cor de contorno */
+  --color-hamburguer: black; /* Preto */
+  --color-start: #AA367C; /* Cor inicial do gradiente */
+  --color-end: #4A2FBD; /* Cor final do gradiente */
+  --form-color: #495057; /* Cor do formulário */
+  --bord-form: #ced4da; /* Cor da borda do formulário */
+  --color-input: #e1e1e1; /*Cor do Input/TextArea */
+  --color-bordInput: #afcbe6; /* Cor da borda do Input/TextArea */
+  --sobrinhado-color: #3becec; /* Cor para sobrinhado de navegação*/
+  --border-project-win: #a7a8a877; /* Borda de projetos vencedores*/
+  --decoration-link: #f050a0; /* Decoração de link*/
+  --color-link: aqua; /* Cor de textos de link */
+
+  --font-family: 'Montserrat', sans-serif; /* Família de fontes principal */
+}
+
+.ff-inter {
+  font-family: var(--font-family);
+}
+
+/*Animação das letras do title*/
+@keyframes noise-anim {
+  0% {
+    clip-path: inset(29% 0px 25%);
+  }
+  5% {
+    clip-path: inset(9% 0px 38%);
+  }
+  10% {
+    clip-path: inset(96% 0px 1%);
+  }
+  15% {
+    clip-path: inset(75% 0px 23%);
+  }
+  20% {
+    clip-path: inset(46% 0px 50%);
+  }
+  25% {
+    clip-path: inset(3% 0px 46%);
+  }
+  30% {
+    clip-path: inset(82% 0px 2%);
+  }
+  35% {
+    clip-path: inset(88% 0px 1%);
+  }
+  40% {
+    clip-path: inset(91% 0px 8%);
+  }
+  45% {
+    clip-path: inset(96% 0px 2%);
+  }
+  50% {
+    clip-path: inset(59% 0px 38%);
+  }
+  55% {
+    clip-path: inset(41% 0px 53%);
+  }
+  60% {
+    clip-path: inset(21% 0px 47%);
+  }
+  65% {
+    clip-path: inset(89% 0px 4%);
+  }
+  70% {
+    clip-path: inset(1% 0px 95%);
+  }
+  75% {
+    clip-path: inset(86% 0px 4%);
+  }
+  80% {
+    clip-path: inset(95% 0px 5%);
+  }
+  85% {
+    clip-path: inset(54% 0px 36%);
+  }
+  90% {
+    clip-path: inset(70% 0px 27%);
+  }
+  95% {
+    clip-path: inset(6% 0px 16%);
+  }
+  100% {
+    clip-path: inset(95% 0px 2%);
+  }
+}
+
+/*Animação das letras do title*/
+@keyframes noise-anim-2 {
+  0% {
+    clip-path: inset(76% 0px 21%);
+  }
+  5% {
+    clip-path: inset(54% 0px 7%);
+  }
+  10% {
+    clip-path: inset(55% 0px 29%);
+  }
+  15% {
+    clip-path: inset(89% 0px 3%);
+  }
+  20% {
+    clip-path: inset(33% 0px 40%);
+  }
+  25% {
+    clip-path: inset(17% 0px 56%);
+  }
+  30% {
+    clip-path: inset(37% 0px 51%);
+  }
+  35% {
+    clip-path: inset(38% 0px 19%);
+  }
+  40% {
+    clip-path: inset(93% 0px 4%);
+  }
+  45% {
+    clip-path: inset(44% 0px 14%);
+  }
+  50% {
+    clip-path: inset(53% 0px 26%);
+  }
+  55% {
+    clip-path: inset(67% 0px 11%);
+  }
+  60% {
+    clip-path: inset(85% 0px 13%);
+  }
+  65% {
+    clip-path: inset(27% 0px 37%);
+  }
+  70% {
+    clip-path: inset(87% 0px 4%);
+  }
+  75% {
+    clip-path: inset(10% 0px 8%);
+  }
+  80% {
+    clip-path: inset(51% 0px 27%);
+  }
+  85% {
+    clip-path: inset(10% 0px 60%);
+  }
+  90% {
+    clip-path: inset(83% 0px 3%);
+  }
+  95% {
+    clip-path: inset(23% 0px 55%);
+  }
+  100% {
+    clip-path: inset(1% 0px 81%);
+  }
+}
+
+/*Animação da seta*/
+@keyframes forward {
+  0% {
+    margin-left: 0.3rem;
+  }
+  100% {
+    margin-left: 1.3rem;
+  }
+}
+
+
+
+body {
+  font-family: Blorado, sans-serif;
+  margin: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  background: var(--main-bg-color) !important;
+  padding-right: 0px !important;
+}
+
+.mural {
+  color: var(--text-color);
+  justify-content: space-between;
+  margin: 1rem 0 2rem;
+  font-weight: 400;
+  text-align: justify;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+.header {
+  margin: 1rem auto 2rem;
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.title::before {
+  content: attr(data-text); /* Pega o conteúdo do atributo data-text */
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  width: 100%;
+  height: 100%;
+  text-shadow: var(--blue-shadow) -1px 0px; /* Sombra azul turquesa */
+  animation: 15s linear 0s infinite alternate-reverse none running noise-anim-2;
+}
+
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  text-shadow: var(--pink-shadow) 3px 0px; /* Sombra rosa */
+  animation: 2s linear 0s infinite alternate-reverse none running noise-anim;
+}
+
+.botao {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  max-width: 150px;
+  width: 120px;
+  font-size: 1.5em;
+  padding: 1rem;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.botao::before,
+.botao::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+.botao::before {
+  transform: translateX(-50%);
+}
+
+.botao::after {
+  transform: translateX(-50%);
+}
+
+.botao:hover::before,
+.botao:hover::after {
+  width: 100%;
+}
+
+.icon-spacing {
+  margin-left: 1rem;
+  animation-name: forward;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@media (min-width: 576px) {
+  .container {
+      width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+      width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+      width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+      width: 1140px;
+  }
+}

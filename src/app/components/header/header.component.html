@@ -1,0 +1,29 @@
+<header class="cabecalho ff-inter">
+  <div class="logo">
+    <a routerLink="/">
+      <mat-icon svgIcon="logo" class="logoSvg white-icon" ></mat-icon>
+    </a>
+  </div>
+  <!-- Botão do menu hamburguer -->
+  <button class="hamburguer" (click)="toggleMenu()" >
+    <div class="linha"></div>
+    <div class="linha"></div>
+    <div class="linha"></div>
+  </button>
+
+  <!-- Menu comum, visível quando isMenuVisible é falso -->
+  <nav class="menu-comum" *ngIf="!isMenuVisible">
+    <button routerLink="/about" class="botao">Sobre</button>
+    <button routerLink="/project" class="botao">Projetos</button>
+    <button routerLink="/contact" class="botao">Contato</button>
+  </nav>
+
+   <!-- Menu hamburguer, visível quando isMenuVisible é verdadeiro -->
+  <nav *ngIf="isMenuVisible" class="hamburguer-menu">
+    <a  (click)="toggleMenu()" class="fechar">X</a>
+    <a routerLink="/about" class="botao" (click)="toggleMenu()">Sobre</a>
+    <a routerLink="/project" class="botao" (click)="toggleMenu()">Projetos</a>
+    <a routerLink="/contact" class="botao" (click)="toggleMenu()">Contato</a>
+   </nav>
+
+</header>

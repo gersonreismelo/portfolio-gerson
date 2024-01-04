@@ -1,0 +1,52 @@
+/* Estilos padrão do footer usando Grid Layout */
+footer {
+  display: grid; /* Define o elemento como um grid container */
+  grid-template-columns: 1fr 1fr 1fr; /* Define as colunas do grid com tamanhos iguais */
+  grid-template-rows: 1fr; /* Define uma única linha para as linhas do grid */
+  gap: 0px 0px; /* Define o espaçamento entre as células do grid */
+  grid-template-areas: "Contato . TextoCopyright"; /* Define as áreas do grid */
+  align-items: first baseline; /* Alinha os itens na primeira linha da linha de base */
+}
+
+/* Estilos específicos para o elemento que contém informações de direitos autorais */
+.TextoCopyright {
+  justify-self: center; /* Centraliza o texto horizontalmente */
+  grid-area: TextoCopyright; /* Define a área no grid */
+}
+
+/* Estilos para a seção de Contato, que contém ícones de redes sociais */
+.Contato {
+  grid-area: Contato;
+}
+
+/* Estilizando os links de redes sociais dentro da seção de Contato */
+.Contato a {
+  padding-right: 0.7em;
+}
+
+/* Estilizando os ícones de redes sociais */
+.Contato a mat-icon {
+  fill: var(--text-color);
+}
+
+/* Estilizando os ícones de redes sociais quando o mouse está sobre eles */
+.Contato a mat-icon:hover {
+  stroke: var(--contorn-color); /* Cor do contorno ao passar o mouse */
+  stroke-width: 2px; /* Largura do contorno */
+  stroke-opacity: 0.8; /* Opacidade do contorno */
+}
+
+/* Estilos para o texto de direitos autorais dentro do footer */
+footer small {
+  color: var(--text-color);
+}
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+  /* Altera o layout do footer para coluna inversa em telas menores */
+  footer {
+    display: flex; /* Define o elemento como flex container */
+    flex-direction: column-reverse; /* Inverte a direção da coluna */
+    gap: 1rem; /* Espaçamento entre elementos */
+  }
+}
