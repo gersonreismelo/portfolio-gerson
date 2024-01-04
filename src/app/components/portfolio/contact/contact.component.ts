@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Firestore } from '@angular/fire/firestore';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { addDoc, collection } from 'firebase/firestore';
 
 // Definição da interface para representar os dados do formulário de contato
@@ -23,7 +24,11 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void { }
 
   // Injeção do serviço Firestore para interação com o Firebase Firestore
-  constructor(private firestore: Firestore) {
+  constructor(
+    private firestore: Firestore,
+    private router: Router,
+    private route: ActivatedRoute
+    ) {
 
   }
 
@@ -51,6 +56,8 @@ export class ContactComponent implements OnInit {
         email: '',
         mensagem: '',
       };
+
+      this.router.navigate(['/contact/contactSent'])
     }
   }
 }

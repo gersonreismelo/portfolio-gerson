@@ -3,8 +3,9 @@ import { HomeComponent } from './components/portfolio/home/home.component';
 import { AboutComponent } from './components/portfolio/about/about.component';
 import { ContactComponent } from './components/portfolio/contact/contact.component';
 import { ProjectComponent } from './components/portfolio/project/project.component';
-import { CandidateHiringSystemComponent } from './components/portfolio/projetos/candidate-hiring-system/candidate-hiring-system.component';
-import { SeniorSmartComponent } from './components/portfolio/projetos/senior-smart/senior-smart.component';
+import { ContactSentComponent } from './components/portfolio/contact/contact-sent/contact-sent.component';
+import { CandidateHiringSystemComponent } from './components/portfolio/project/projetos/candidate-hiring-system/candidate-hiring-system.component';
+import { SeniorSmartComponent } from './components/portfolio/project/projetos/senior-smart/senior-smart.component';
 
 // Definição das rotas da aplicação
 export const routes: Routes = [
@@ -25,11 +26,15 @@ export const routes: Routes = [
     component: ProjectComponent
   },
   {
-    'path': 'candidatehiringsystem',
+    'path': 'project/candidateHiringSystem',
     component: CandidateHiringSystemComponent
   },
   {
-    'path': 'seniorsmart',
+    'path': 'project/seniorSmart',
     component: SeniorSmartComponent
+  },
+  {
+    'path': 'contact/contactSent',
+    component: ContactSentComponent
   },
 ];
